@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { pulseVariants } from '@/lib/motion';
 
-interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+type BadgeHTMLProps = Omit<HTMLAttributes<HTMLSpanElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart'>;
+
+interface BadgeProps extends BadgeHTMLProps {
   variant?: 'default' | 'priority' | 'status' | 'tag';
   color?: string;
   pulse?: boolean;
