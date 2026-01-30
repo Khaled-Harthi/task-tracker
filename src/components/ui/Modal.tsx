@@ -6,7 +6,9 @@ import { cn } from '@/lib/utils';
 import { overlayVariants, modalVariants } from '@/lib/motion';
 import { X } from 'lucide-react';
 
-interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+type ModalHTMLProps = Omit<HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart'>;
+
+interface ModalProps extends ModalHTMLProps {
   open: boolean;
   onClose: () => void;
   title?: string;
