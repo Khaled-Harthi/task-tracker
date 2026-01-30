@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-light;
+  }
+
+  body {
+    @apply bg-primary text-text-primary antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-light rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-muted;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-coral-500/30 text-text-primary;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-surface/80 backdrop-blur-xl border border-white/5;
+  }
+
+  /* Glow effects */
+  .glow {
+    @apply shadow-glow;
+  }
+
+  .glow-sm {
+    @apply shadow-glow-sm;
+  }
+
+  /* Shimmer loading effect */
+  .shimmer {
+    @apply bg-shimmer-gradient bg-[length:200%_100%] animate-shimmer;
+  }
+
+  /* Coral gradient text */
+  .text-coral-gradient {
+    @apply bg-coral-gradient bg-clip-text text-transparent;
+  }
+
+  /* Priority indicators */
+  .priority-low {
+    @apply border-s-4 border-emerald-500;
+  }
+
+  .priority-medium {
+    @apply border-s-4 border-amber-500;
+  }
+
+  .priority-high {
+    @apply border-s-4 border-orange-500;
+  }
+
+  .priority-urgent {
+    @apply border-s-4 border-coral-500;
+  }
+}
+
+@layer utilities {
+  /* RTL-aware utilities */
+  .flip-rtl {
+    @apply rtl:scale-x-[-1];
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-coral-500/50 focus:ring-offset-2 focus:ring-offset-primary;
+  }
+}

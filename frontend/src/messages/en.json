@@ -1,0 +1,121 @@
+{
+  "app": {
+    "name": "Task Tracker",
+    "dashboard": "Dashboard",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Create Account",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Logged in successfully",
+    "registerSuccess": "Account created successfully",
+    "welcome": "Welcome",
+    "welcomeBack": "Welcome back"
+  },
+  "tasks": {
+    "title": "Tasks",
+    "add": "Add Task",
+    "addNew": "New Task",
+    "edit": "Edit Task",
+    "complete": "Complete",
+    "delete": "Delete",
+    "description": "Description",
+    "dueDate": "Due Date",
+    "noDueDate": "No due date",
+    "overdue": "Overdue",
+    "dueToday": "Due today",
+    "noTasks": "No tasks",
+    "noTasksDesc": "Start by adding a new task",
+    "priority": {
+      "label": "Priority",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "status": {
+      "label": "Status",
+      "todo": "To Do",
+      "in_progress": "In Progress",
+      "done": "Done"
+    },
+    "completed": "Task completed!",
+    "deleted": "Task deleted",
+    "created": "Task created",
+    "updated": "Task updated"
+  },
+  "projects": {
+    "title": "Projects",
+    "add": "Add Project",
+    "addNew": "New Project",
+    "edit": "Edit Project",
+    "delete": "Delete Project",
+    "name": "Project Name",
+    "description": "Project Description",
+    "color": "Project Color",
+    "noProjects": "No projects",
+    "noProjectsDesc": "Start by creating a new project",
+    "taskCount": "{count} tasks",
+    "created": "Project created",
+    "updated": "Project updated",
+    "deleted": "Project deleted",
+    "all": "All Projects"
+  },
+  "tags": {
+    "title": "Tags",
+    "add": "Add Tag",
+    "addNew": "New Tag",
+    "edit": "Edit Tag",
+    "delete": "Delete Tag",
+    "name": "Tag Name",
+    "color": "Tag Color",
+    "noTags": "No tags",
+    "select": "Select tags",
+    "created": "Tag created",
+    "updated": "Tag updated",
+    "deleted": "Tag deleted"
+  },
+  "filters": {
+    "title": "Filters",
+    "clear": "Clear all",
+    "byProject": "By Project",
+    "byTag": "By Tag",
+    "byPriority": "By Priority",
+    "byStatus": "By Status",
+    "byDate": "By Date",
+    "search": "Search...",
+    "noResults": "No results"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "deleting": "Deleting...",
+    "success": "Success",
+    "error": "Error",
+    "required": "This field is required",
+    "optional": "Optional"
+  },
+  "language": {
+    "switch": "Change Language",
+    "ar": "العربية",
+    "en": "English"
+  }
+}
