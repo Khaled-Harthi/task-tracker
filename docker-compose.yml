@@ -22,7 +22,7 @@ services:
   # Next.js App (Frontend + API)
   app:
     build:
-      context: ./frontend
+      context: .
       dockerfile: Dockerfile
     container_name: task-tracker-app
     environment:
