@@ -1,12 +1,16 @@
 {
-  "name": "task-tracker-frontend",
+  "name": "task-tracker",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -18,16 +22,23 @@
     "tailwind-merge": "^2.2.0",
     "lucide-react": "^0.323.0",
     "date-fns": "^3.3.0",
-    "canvas-confetti": "^1.9.0"
+    "canvas-confetti": "^1.9.0",
+    "@prisma/client": "^5.10.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/canvas-confetti": "^1.6.4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "prisma": "^5.10.0"
   }
 }

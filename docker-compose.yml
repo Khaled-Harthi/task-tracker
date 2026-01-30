@@ -19,46 +19,21 @@ services:
       timeout: 5s
       retries: 5
 
-  # Backend API
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: task-tracker-api
-    environment:
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/task_tracker?schema=public
-      JWT_SECRET: your-super-secret-jwt-key-change-in-production
-      FRONTEND_URL: http://localhost:3000
-      PORT: 3001
-      NODE_ENV: development
-    ports:
-      - "3001:3001"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - ./backend/src:/app/src
-      - ./backend/prisma:/app/prisma
-    command: >
-      sh -c "npx prisma generate &&
-             npx prisma db push &&
-             npm run dev"
-
-  # Frontend
-  frontend:
+  # Next.js App (Frontend + API)
+  app:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: task-tracker-web
+    container_name: task-tracker-app
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:3001/api
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/task_tracker?schema=public
+      JWT_SECRET: your-super-secret-jwt-key-change-in-production
+      NEXT_PUBLIC_API_URL: /api
     ports:
       - "3000:3000"
     depends_on:
-      - backend
-    volumes:
-      - ./frontend/src:/app/src
-      - ./frontend/public:/app/public
+      postgres:
+        condition: service_healthy
 
 volumes:
   postgres_data:
